@@ -1,22 +1,26 @@
 package com.duiuj.is.controller;
 
-import com.duiuj.is.repository.UserDb;
-import com.duiuj.is.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class PageController {
-    @Autowired
-    private UserService userService;
-
-    @Autowired
-    private UserDb userDb;
-
-    @RequestMapping("/login")
-    public String login() {
-        return "login";
+    @GetMapping(value = "/")
+    private String home(){
+        return "home";
     }
 
+    @GetMapping(value = "/main-event/order")
+    private String order(Model model){
+        //TODO
+        return "main-event_order";
+    }
+
+    @PostMapping(value = "main-event/order")
+    private String order(){
+        //TODO
+        //redirect ke page "main-event/pay
+    }
 }
