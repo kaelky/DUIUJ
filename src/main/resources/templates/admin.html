@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+
+        <!-- Required Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device=width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <title>DUIUJ - Admin</title>
+
+    </head>
+    <body>
+
+        <table class="table table-active">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nama Lengkap</th>
+                    <th scope="col">Asal Sekolah</th>
+                    <th scope="col">Nomor Handphone</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Hapus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="ticket, iterationStatus : ${tickets}">
+                    <td th:text="${iterationStatus.count}"></td>
+                    <td> <a th:href="@{|/cek-status-tiket/${ticket.id}|}" th:text="${ticket.namaLengkap}"/></td>
+                    <td th:text="${ticket.asalSekolah}"></td>
+                    <td th:text="${ticket.nomorHandphone}"></td>
+                    <td th:if="${ticket.statusPembayaran == 0}">
+                        <form th:action="@{|/admin/tiket/changeStatus/${ticket.id}|}" method="post">
+                            <button type="submit" class="btn-dark">Belum Bayar</button>
+                        </form>
+                    </td>
+                    <td th:if="${ticket.statusPembayaran == 1}">
+                        <form th:action="@{|/admin/tiket/changeStatus/${ticket.id}|}" method="post">
+                            <button type="submit" class="btn-dark">Valid</button>
+                        </form>
+                    <td>
+                    <form th:action="@{|/admin/tiket/delete/${ticket.id}|}" method="POST">
+                        <button type="submit" class="btn-danger" data-toggle="modal" data-target="#confirmationModal">Delete</button>
+                    </form>
+                    </td>
+                </tr>
+            </tbody>
+
+            <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="confirmationModalTitle">Konfirmasi</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h5>Apakah kamu yakin akan menghapus tiket ini?</h5>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                            <button type="button" class="btn btn-danger" id="delete">Ya</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </table>
+
+        <!-- Scripts -->
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>

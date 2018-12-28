@@ -53,4 +53,84 @@ public class TiketModel implements Serializable {
     @NotNull
     @Column(name = "status_pembayaran", nullable = false)
     private int statusPembayaran;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getNamaLengkap() {
+        return namaLengkap;
+    }
+
+    public void setNamaLengkap(String namaLengkap) {
+        this.namaLengkap = namaLengkap;
+    }
+
+    public String getNomorHandphone() {
+        return nomorHandphone;
+    }
+
+    public void setNomorHandphone(String nomorHandphone) {
+        this.nomorHandphone = nomorHandphone;
+    }
+
+    public String getAsalSekolah() {
+        return asalSekolah;
+    }
+
+    public void setAsalSekolah(String asalSekolah) {
+        this.asalSekolah = asalSekolah;
+    }
+
+    public String getKodeTiket() {
+        return kodeTiket;
+    }
+
+    public void setKodeTiket(String kodeTiket) {
+        this.kodeTiket = kodeTiket;
+    }
+
+    public String getPasswordTiket() {
+        return passwordTiket;
+    }
+
+    public void setPasswordTiket(String passwordTiket) {
+        this.passwordTiket = passwordTiket;
+    }
+
+    public String getPilihanJurusan1() {
+        return pilihanJurusan1;
+    }
+
+    public void setPilihanJurusan1(String pilihanJurusan1) {
+        this.pilihanJurusan1 = pilihanJurusan1;
+    }
+
+    public String getPilihanJurusan2() {
+        return pilihanJurusan2;
+    }
+
+    public void setPilihanJurusan2(String pilihanJurusan2) {
+        this.pilihanJurusan2 = pilihanJurusan2;
+    }
+
+    public String getPilihanJurusan3() {
+        return pilihanJurusan3;
+    }
+
+    public void setPilihanJurusan3(String pilihanJurusan3) {
+        this.pilihanJurusan3 = pilihanJurusan3;
+    }
+
+    public int getStatusPembayaran() {
+        return statusPembayaran;
+    }
+
+    public void setStatusPembayaran(int statusPembayaran) {
+        this.statusPembayaran = statusPembayaran;
+    }
 }

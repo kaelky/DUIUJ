@@ -7,5 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TiketDb extends JpaRepository<TiketModel, Long> {
     TiketModel findByKodeTiket(String kodeTiket);
+    TiketModel findByNomorHandphone(String nomorHandphone);
     TiketModel findByNamaLengkapAndNomorHandphone(String namaLengkap, String nomorHandphone);
 }
