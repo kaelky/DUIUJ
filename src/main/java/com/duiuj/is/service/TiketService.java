@@ -5,8 +5,16 @@ import com.duiuj.is.model.TiketModel;
 import java.util.List;
 
 public interface TiketService {
-    List<TiketModel> findAll();
-    void deleteTicket(long id);
-    TiketModel findById(long id);
-    void changeStatusTiket(TiketModel tiket);
+    /* CRUD */
+    TiketModel add(TiketModel tiketModel);
+    TiketModel update(TiketModel tiket);
+    void changeStatus(TiketModel tiket);
+    void delete(TiketModel tiketModel);
+
+    /* Getter */
+    List<TiketModel> getAll();
+    TiketModel getById(long id);
+    TiketModel getByNamaLengkapAndNomorHandphone(String nama, String noHp);
+    TiketModel getByKodeTiket(String kodeTiket);
+    TiketModel getByNomorHandphone(String nomorHandphone);
 }

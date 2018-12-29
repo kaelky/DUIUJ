@@ -14,29 +14,66 @@ public class TiketServiceImpl implements TiketService {
     @Autowired
     private TiketDb tiketDb;
 
+    /* CRUD Tiket */
     @Override
-    public List<TiketModel> findAll() {
+    public TiketModel add(TiketModel tiketModel) {
+        return tiketDb.save(tiketModel);
+    }
+
+    @Override
+    public TiketModel update(TiketModel tiket) {
+        TiketModel oldTiket = tiketDb.findById(tiket.getId());
+        oldTiket.setNamaLengkap(tiket.getNamaLengkap());
+        oldTiket.setNomorHandphone(tiket.getNomorHandphone());
+        oldTiket.setAsalSekolah(tiket.getAsalSekolah());
+        oldTiket.setKodeTiket(tiket.getKodeTiket());
+        oldTiket.setPasswordTiket(tiket.getPasswordTiket());
+        oldTiket.setPilihanJurusan1(tiket.getPilihanJurusan1());
+        oldTiket.setPilihanJurusan2(tiket.getPilihanJurusan2());
+        oldTiket.setPilihanJurusan3(tiket.getPilihanJurusan3());
+        oldTiket.setStatusPembayaran(tiket.getStatusPembayaran());
+        return tiketDb.save(oldTiket);
+    }
+
+    @Override
+    public void changeStatus(TiketModel tiket) {
+        if (tiket.getStatusPembayaran() == 1) {
+            tiket.setStatusPembayaran(0);
+        } else {
+            tiket.setStatusPembayaran(1);
+        }
+        tiketDb.save(tiket);
+    }
+
+    @Override
+    public void delete(TiketModel tiketModel) {
+        tiketDb.delete(tiketModel);
+    }
+
+    /* Getter */
+
+    @Override
+    public List<TiketModel> getAll() {
         return tiketDb.findAll();
     }
 
     @Override
-    public void deleteTicket(long id){
-        tiketDb.deleteById(id);
+    public TiketModel getById(long id) {
+        return tiketDb.findById(id);
     }
 
     @Override
-    public TiketModel findById(long id){
-        return tiketDb.getOne(id);
+    public TiketModel getByNamaLengkapAndNomorHandphone(String nama, String noHp) {
+        return tiketDb.findByNamaLengkapAndNomorHandphone(nama, noHp);
     }
 
     @Override
-    public void changeStatusTiket(TiketModel tiket){
-        if (tiket.getStatusPembayaran() == 1){
-            tiket.setStatusPembayaran(0);
-        }
-        else {
-            tiket.setStatusPembayaran(1);
-        }
-        tiketDb.save(tiket);
+    public TiketModel getByKodeTiket(String kodeTiket) {
+        return tiketDb.findByKodeTiket(kodeTiket);
+    }
+
+    @Override
+    public TiketModel getByNomorHandphone(String nomorHandphone) {
+        return tiketDb.findByNomorHandphone(nomorHandphone);
     }
 }
