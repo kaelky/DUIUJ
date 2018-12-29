@@ -1,81 +1,57 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>SI Farmasi</title>
+    <head>
+        <title>Dari Universitas Indonesia Untuk Jambi</title>
 
-    <head th:fragment="css">
-        <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-        <link rel="stylesheet" type="text/css"
-              href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>
-        <link rel="stylesheet" th:href="@{/css/style.css}">
-    </head>
-
-    <head th:fragment="404_error_page">
-        <link rel="stylesheet" th:href="@{/css/font_for_404.css}">
-        <link rel="stylesheet" type="text/css" th:href="@{/css/error_404.css}">
-    </head>
-
-    <head th:fragment="500_error_page_css">
-        <link rel="stylesheet" th:href="@{/css/error_500.css}">
+        <head th:fragment="css">
+            <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+            <link rel="stylesheet" th:href="@{/css/style.css}">
+        </head>
 
         <head th:fragment="js">
-        </head>
-
-        <head th:fragment="500_error_page_js">
-            <script th:src="@{js/error_500.js}"></script>
-        </head>
-
-        <head th:fragment="viewall_jabatan_module_included">
-            <link th:href="@{//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css}" rel="stylesheet"
-                  id="bootstrap-css">
-            <link rel="stylesheet"
-                  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        </head>
-
-        <head th:fragment="ajax_dynamic_dropdown">
-            <script th:src="@{//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js}"></script>
+            <script th:src="@{/js/bootstrap.min.js}"></script>
         </head>
 
     </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #003366;">
-    <a class="navbar-brand" th:href="@{/}"><img th:src="@{/img/sifarmasi-logo.png}" style="width: 50px ; height: auto">
-        SI Farmasi</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
-            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggle-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/}">Home</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav pull-right">
-            <li class="nav-item active">
-                <a class="nav-link" th:href="@{/user/updatePassword}">Ganti Password</a>
-            </li>
-            <li class="nav-item active">
-                <a class="btn btn-outline-primary" th:href="@{/logout}">Logout</a>
-            </li>
-        </ul>
-    </div>
-</nav>
 
-<footer th:fragment="footer">
-    <div class="container" style="text-align: center; font-size: 14px; ">
-	<span>Made with <span style="color: #fd0864">💔</span> and <span style="color: #fff000">&#128557;</span> by <a
-            href="https://github.com/kaelky/TA_4_8">Kelompok 8 APAP-B</a>
-    </div>
+    <body>
 
-    <script th:src="@{/jquery/jquery-3.3.1.min.js}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-    <script th:src="@{/js/bootstrap.min.js}"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-</footer>
-</body>
+        <!-- Navbar -->
+        <nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" th:href="@{/}">
+                <img class="d-inline-block align-top"
+                     th:src="@{/img/Logo DUIUJ XV.png}"
+                     style="width: 30px ; height: 30px ;" alt="">
+                 DUIUJ
+            </a>
+            <!-- Responsive Toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar1">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" th:href="@{/}">Home <span class="sr-only">(current)</span> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/}">Main Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/}">Competition</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/}">Check Your Ticket</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Footer -->
+        <footer th:fragment="footer">
+
+        </footer>
+
+    </body>
 
 </html>
