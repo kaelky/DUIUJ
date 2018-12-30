@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- CSS and JS Bootstrap -->
+        <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+        <object th:include="fragments/fragment :: js" th:remove="tag"></object>
+
+        <title>Dari Universitas Indonesia Untuk Jambi - Cek Status</title>
+    </head>
+
+    <body>
+        <nav th:replace="fragments/fragment :: navbar"></nav>
+
+        <div class="container">
+            <div class="row">
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card text-white bg-dark text-center">
+                        <div class="card-header">
+                            Cek Status Tiket
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Masukkan Kode Tiket</h5>
+                            <form th:action = "@{/ticket/check/kode}" method="get">
+                                <input required class="form-control input-group-sm" placeholder="Kode Tiket" th:name="kodeTiket"/>
+                                <button type="submit" class="btn btn-primary">Cek Sekarang</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card text-white bg-dark text-center">
+                        <div class="card-header">
+                            Lupa Kode Tiket
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Pulihkan Kode Tiket</h5>
+                            <form th:action="@{/ticket/check/pulih}" method="get">
+                                <input required class="form-control input-group-sm" placeholder="Nama Lengkap" th:name="namaLengkap"/>
+                                <input required class="form-control input-group-sm" placeholder="Nomor Handphone" th:name="nomorHandphone"/>
+                                <button type="submit" class="btn btn-primary">Pulihkan Kode Tiket</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

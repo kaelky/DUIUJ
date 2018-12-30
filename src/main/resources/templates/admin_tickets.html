@@ -8,6 +8,8 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+        <object th:include="fragments/fragment :: js" th:remove="tag"></object>
 
         <title>DUIUJ - Admin</title>
 
@@ -34,16 +36,16 @@
                     <td th:text="${ticket.asalSekolah}"></td>
                     <td th:text="${ticket.nomorHandphone}"></td>
                     <td th:if="${ticket.statusPembayaran == 0}">
-                        <form th:action="@{|/admin/tiket/changeStatus/${ticket.id}|}" method="post">
+                        <form th:action="@{|/admin/ticket/changeStatus/${ticket.id}|}" method="post">
                             <button type="submit" class="btn-dark">Belum Bayar</button>
                         </form>
                     </td>
                     <td th:if="${ticket.statusPembayaran == 1}">
-                        <form th:action="@{|/admin/tiket/changeStatus/${ticket.id}|}" method="post">
+                        <form th:action="@{|/admin/ticket/changeStatus/${ticket.id}|}" method="post">
                             <button type="submit" class="btn-dark">Valid</button>
                         </form>
                     <td>
-                    <form th:action="@{|/admin/tiket/delete/${ticket.id}|}" method="POST">
+                    <form th:action="@{|/admin/ticket/delete/${ticket.id}|}" method="POST">
                         <button type="submit" class="btn-danger" data-toggle="modal" data-target="#confirmationModal">Delete</button>
                     </form>
                     </td>

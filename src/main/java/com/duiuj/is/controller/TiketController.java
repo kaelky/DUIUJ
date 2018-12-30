@@ -3,23 +3,45 @@ package com.duiuj.is.controller;
 import com.duiuj.is.model.TiketModel;
 import com.duiuj.is.service.TiketService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.UUID;
-import java.io.IOException;
 
-@RestController
+@Controller
 public class TiketController {
     @Autowired
     private TiketService tiketService;
 
-    @GetMapping (value = "/cek-status-tiket/{IDTiket}")
-    private String viewTiketDetail(@PathVariable(value = "IDTiket") long IDTiket, Model model) throws IOException {
-        TiketModel ticket = tiketService.getById(IDTiket);
+    private RedirectView redirectView;
+
+    @GetMapping (value = "/ticket/check")
+    private String checkTicketStatus(){
+        return "check-status";
+    }
+
+  /*  @PostMapping (value = "/ticket/check")
+    private RedirectView checkTicketStatus(@ModelAttribute TicketWithID objekPengecekan) {
+        redirectView.setUrl("/ticket/check" + objekPengecekan.getKodeTiket());
+        return redirectView;
+    }*/
+
+    @GetMapping (value = "/ticket/check/kode")
+    private String checkTicketStatusWithTicket(@RequestParam("kodeTiket") String kodeTiket, Model model) {
+        TiketModel ticket = tiketService.getByKodeTiket(kodeTiket);
+        model.addAttribute("ticket", ticket);
+        return "tiket-detail";
+    }
+
+    @GetMapping (value = "/ticket/check/pulih")
+    private String checkTicketStatusWithNamaLengkapAndNomorHandphone(@RequestParam("namaLengkap") String namaLengkap,
+                                                                     @RequestParam("nomorHandphone") String nomorHandphone,
+                                                                     Model model) {
+        TiketModel ticket = tiketService.getByNamaLengkapAndNomorHandphone(namaLengkap, nomorHandphone);
         model.addAttribute("ticket", ticket);
         return "tiket-detail";
     }
