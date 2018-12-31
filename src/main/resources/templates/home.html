@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- CSS and JS Bootstrap -->
+    <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: js" th:remove="tag"></object>
+
+    <title>Dari Universitas Indonesia Untuk Jambi</title>
+</head>
+<body>
+<nav th:replace="fragments/fragment :: navbar-home"></nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="jumbotron">
+                <p>Selamat datang di website</p>
+                <h1 class="display-4">DUIUJ 15</h1>
+                <p class="desc">Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
+                    Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 text-center" style="background-color: lightpink">
+                <h3>Main Event</h3>
+                <br/>
+                <br/>
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <p>Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
+                            Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.</p>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
+                <br/>
+                <br/>
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <a class="btn btn-light" th:href="@{/main-event}">Pesan Tiket Main Event</a>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center" style="background-color: lightgray">
+                <h3>Kompetisi</h3>
+                <br/>
+                <br/>
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <p>Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
+                            Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.</p>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
+                <br/>
+                <br/>
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6"><a class="btn btn-secondary" th:href="@{/competition}">Pelajari Lebih Lanjut</a></div>
+                    <div class="col-lg-3"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

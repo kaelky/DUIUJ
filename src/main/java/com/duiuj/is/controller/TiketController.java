@@ -41,15 +41,8 @@ public class TiketController {
         return "tiket-detail";
     }
     
-    @GetMapping(value = "/main-event/order")
-    private String order(Model model){
-        TiketModel newTicket = new TiketModel();
-        model.addAttribute("ticket", newTicket);
-        return "main-event_order";
-    }
-    
-    @PostMapping(value="/main-event/order")
-    public String addTiket(@ModelAttribute TiketModel tiket, Model model){
+    @PostMapping(value="/main-event/ticket/order")
+    public String addTiket(@ModelAttribute TiketModel ticket, Model model){
         boolean flag = true;
         while(flag){
             String uuid = UUID.randomUUID().toString().substring(0,8).toUpperCase();
@@ -58,14 +51,14 @@ public class TiketController {
                     flag = true;
                 }else{
                     flag = false;
-                    tiket.setKodeTiket(uuid);
+                    ticket.setKodeTiket(uuid);
                 }
             }
         }
-        tiket.setPasswordTiket(tiket.getKodeTiket());
-        tiketService.add(tiket);
-        model.addAttribute("tiket", tiket);
-        return "main-event_pay";
+        ticket.setPasswordTiket(ticket.getKodeTiket());
+        tiketService.add(ticket);
+        model.addAttribute("tiket", ticket);
+        return "order_success";
     }
 
     

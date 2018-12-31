@@ -7,12 +7,10 @@
     <object th:include="fragments/fragment :: css" th:remove="tag"></object>
     <object th:include="fragments/fragment :: js" th:remove="tag"></object>
 
-    <title>Dari Universitas Indonesia Untuk Jambi - Pesan Tiket</title>
+    <title>Dari Universitas Indonesia Untuk Jambi - Main Event</title>
 </head>
 <body>
-<nav th:replace="fragments/fragment :: navbar"></nav>
-
-
+<nav th:replace="fragments/fragment :: navbar-mainevent"></nav>
 
     <div class="container-fluid">
         <div class="row">
@@ -49,7 +47,7 @@
                             <div role="tabpanel" class="tab-pane active" id="order">
                                 <p class="card-text">Lengkapi formulir pemesanan tiket di bawah ini untuk membeli tiket <i>main event</i> Dari Universitas Indonesia Untuk Jambi ke-15</p>
                                 <br/>
-                                <form th:action="@{/main-event/order}" th:object="${ticket}" method="POST">
+                                <form th:action="@{/main-event/ticket/order}" th:object="${ticket}" method="POST">
                                     <input required type="text" class="form-control input-group-sm" name="namaLengkap" th:value="*{namaLengkap}" placeholder="Nama Lengkap" style="margin-bottom: 20px;">
                                     <input required type="text" class="form-control input-group-sm" name="asalSekolah" th:value="*{asalSekolah}" placeholder="Asal Sekolah" style="margin-bottom: 20px;">
                                     <input required type="text" class="form-control input-group-sm" name="nomorHandphone" th:value="*{nomorHandphone}" placeholder="Nomor Handphone" style="margin-bottom: 20px;">

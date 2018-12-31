@@ -17,8 +17,8 @@
 
     <body>
 
-        <!-- Navbar -->
-        <nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Navbar - Home (Active) -->
+        <nav th:fragment="navbar-home" class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" th:href="@{/}">
                 <img class="d-inline-block align-top"
                      th:src="@{/img/Logo DUIUJ XV.png}"
@@ -36,10 +36,67 @@
                         <a class="nav-link active" th:href="@{/}">Home <span class="sr-only">(current)</span> </a>
                     </li>
                     <li class="nav-item text-center px-4 mx-auto">
-                        <a class="nav-link" th:href="@{/main-event/order}">Main Event</a>
+                        <a class="nav-link" th:href="@{/main-event}">Main Event</a>
                     </li>
                     <li class="nav-item text-center px-4 mx-auto">
-                        <a class="nav-link" th:href="@{/}">Competition</a>
+                        <a class="nav-link" th:href="@{/competition}">Kompetisi</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Navbar - Main Event (Active) -->
+        <nav th:fragment="navbar-mainevent" class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" th:href="@{/}">
+                <img class="d-inline-block align-top"
+                     th:src="@{/img/Logo DUIUJ XV.png}"
+                     style="width: 30px ; height: 30px ;" alt="">
+                DUIUJ
+            </a>
+            <!-- Responsive Toggler -->
+            <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar2">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item text-center px-4">
+                        <a class="nav-link" th:href="@{/}">Home <span class="sr-only">(current)</span> </a>
+                    </li>
+                    <li class="nav-item text-center px-4 mx-auto">
+                        <a class="nav-link active" th:href="@{/main-event}">Main Event</a>
+                    </li>
+                    <li class="nav-item text-center px-4 mx-auto">
+                        <a class="nav-link" th:href="@{/competition}">Kompetisi</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Navbar - Competition (Active) -->
+
+        <nav th:fragment="navbar-competition" class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" th:href="@{/}">
+                <img class="d-inline-block align-top"
+                     th:src="@{/img/Logo DUIUJ XV.png}"
+                     style="width: 30px ; height: 30px ;" alt="">
+                DUIUJ
+            </a>
+            <!-- Responsive Toggler -->
+            <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar3" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar3">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item text-center px-4">
+                        <a class="nav-link" th:href="@{/}">Home <span class="sr-only">(current)</span> </a>
+                    </li>
+                    <li class="nav-item text-center px-4 mx-auto">
+                        <a class="nav-link" th:href="@{/main-event}">Main Event</a>
+                    </li>
+                    <li class="nav-item text-center px-4 mx-auto">
+                        <a class="nav-link active" th:href="@{/competition}">Kompetisi</a>
                     </li>
                 </ul>
             </div>
