@@ -30,5 +30,10 @@ public class PageController {
         return "main-event_pay";
     }
 
+    @GetMapping (value = "/ticket/check")
+    private String checkTicketStatus(){
+        return "check-status";
+    }
+
 
 }

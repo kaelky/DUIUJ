@@ -19,11 +19,6 @@ public class TiketController {
 
     private RedirectView redirectView;
 
-    @GetMapping (value = "/ticket/check")
-    private String checkTicketStatus(){
-        return "check-status";
-    }
-
   /*  @PostMapping (value = "/ticket/check")
     private RedirectView checkTicketStatus(@ModelAttribute TicketWithID objekPengecekan) {
         redirectView.setUrl("/ticket/check" + objekPengecekan.getKodeTiket());

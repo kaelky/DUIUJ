@@ -1,5 +1,26 @@
+:root {
+    --primary: #ba0731;
+    --secondary: #fbfef9;
+    --dark: #000004;
+}
+
+.text-cp-1 {
+    color: #ba0731 !important;
+}
+.text-cp-2 {
+    color: #fbfef9 !important;
+}
+
+.li #bg-cp-1 {
+    background-color: #ba0731;
+}
+
 .navbar-fixed-top {
     margin-bottom: 10rem;
+}
+
+input.placeholder {
+    text-align: center;
 }
 
 html {
@@ -36,4 +57,3 @@ body {
 .resize-container img {
     display: block
 }
-
