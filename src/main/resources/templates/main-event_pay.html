@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- CSS and JS Bootstrap -->
+    <object th:include="fragments/fragment :: css" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: js" th:remove="tag"></object>
+
+    <title>Dari Universitas Indonesia Untuk Jambi - Pesan Tiket</title>
+</head>
+<body>
+<nav th:replace="fragments/fragment :: navbar"></nav>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <p>DUIUJ 15</p>
+        <h1 class="display-4">Main Event</h1>
+        <p class="desc">Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per. 
+        Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.</p>
+    </div>
+</div>
+<div class="title-head-pay">
+    <h3>Tiket Main Event berhasil dipesan!</h3>
+    <h4 th:text="'Kode tiketmu adalah: '+${tiket.kodeTiket}">Kode Tiket</h4>
+    <p>Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per. 
+        Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.
+        Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per. 
+        Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex</p>
+    <div class="perhatian">
+    <br>
+    <h4>Perhatian</h4>
+    <p>Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per. 
+        Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.
+        Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per. 
+        Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex</p>
+	</div>
+	<br>
+	<p>Contact Person: Andi(08000000000)</p>
+</div>
+<button type="submit" class="btn btn-danger btn-fin">Selesai Memesan</button>
+</body>
+</html>

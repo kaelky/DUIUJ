@@ -16,10 +16,11 @@ public class PageController {
     private String adminLogin() {
         return "login";
     }
-
+    
+    /**
     @GetMapping(value = "/main-event/order")
     private String order(Model model){
-        //TODO
+        
         return "main-event_order";
     }
 
@@ -29,6 +30,7 @@ public class PageController {
         //redirect ke page "main-event/pay
         return "main-event_pay";
     }
+    **/
 
     @GetMapping (value = "/ticket/check")
     private String checkTicketStatus(){
