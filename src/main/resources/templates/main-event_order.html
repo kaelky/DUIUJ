@@ -12,21 +12,76 @@
 <body>
 <nav th:replace="fragments/fragment :: navbar"></nav>
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <p>DUIUJ 15</p>
-        <h1 class="display-4">Main Event</h1>
-        <p class="desc">Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per. 
-        Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.</p>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="jumbotron">
+                <p>DUIUJ 15</p>
+                <h1 class="display-4">Main Event</h1>
+                <p class="desc">Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
+                    Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.</p>
+            </div>
+        </div>
     </div>
-</div>
-<div class="title-head">
-    <h3>Pesan Tiket Main Event</h3>
-    <p>Kamu sudah yakin untuk ikut serta dalam DUIUJ 15 ?</p>
-    <p>Jika sudah, isi formulir di bawah ini untuk memesan tiket, ya!</p>
-</div>
-<br>
-<form th:action="@{/main-event/pay}" th:object="${tiket}" method ="POST">
+
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 text-center" style="margin-top: 20px; margin-bottom: 20px;">
+                <h4>Dari Universitas Indonesia Untuk Jambi</h4>
+                <p><i>Online Ticketing System</i></p>
+                <br/>
+                <div class="card">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs" id="helpDeskTab" role="tablist">
+                            <li class="nav-item">
+                                <a href="#order" class="nav-link active" role="tab" data-toggle="tab">Beli Tiket</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#checkStatus" class="nav-link" role="tab" data-toggle="tab">Cek Status Tiket</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="order">
+                                <p class="card-text">Lengkapi formulir pemesanan tiket di bawah ini untuk membeli tiket <i>main event</i> Dari Universitas Indonesia Untuk Jambi ke-15</p>
+                                <br/>
+                                <form th:action="@{/main-event/order}" th:object="${ticket}" method="POST">
+                                    <input required type="text" class="form-control input-group-sm" name="namaLengkap" th:value="*{namaLengkap}" placeholder="Nama Lengkap" style="margin-bottom: 20px;">
+                                    <input required type="text" class="form-control input-group-sm" name="asalSekolah" th:value="*{asalSekolah}" placeholder="Asal Sekolah" style="margin-bottom: 20px;">
+                                    <input required type="text" class="form-control input-group-sm" name="nomorHandphone" th:value="*{nomorHandphone}" placeholder="Nomor Handphone" style="margin-bottom: 20px;">
+                                    <input required type="text" class="form-control" name="pilihanJurusan1" th:value="*{pilihanJurusan1}" placeholder="Pilihan 1* (wajib diisi)" style="margin-bottom: 20px;">
+                                    <input type="text" class="form-control" name="pilihanJurusan2" th:value="*{pilihanJurusan2}" placeholder="Pilihan 2" style="margin-bottom: 20px;">
+                                    <input type="text" class="form-control" name="pilihanJurusan3" th:value="*{pilihanJurusan3}" placeholder="Pilihan 3" style="margin-bottom: 20px;">
+                                    <br/>
+                                    <button type="submit" class="btn btn-danger btn-lg">Pesan Sekarang</button>
+                                </form>
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane" id="checkStatus">
+                                <p class="card-text">Kamu ragu bahwa tiketmu sudah <i>valid</i>? Langsung saja cek status tiketmu! Masukkan kode tiket yang sudah diberikan saat kamu memesan tiket.</p>
+                                <br/>
+                                <form th:action = "@{/ticket/check/kode}" method="get">
+                                    <input required class="form-control input-group-sm" placeholder="Kode Tiket" th:name="kodeTiket"/>
+                                    <br/>
+                                    <button type="submit" class="btn btn-danger">Cek Sekarang</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+
+<!--</div>-->
+<!--<br>-->
+<!--<form th:action="@{/main-event/order}" th:object="${ticket}" method ="POST">
   <div class="row top">
     <div class="col">
     <h4> Data Diri </h4>
@@ -34,7 +89,7 @@
         <div class="input-group-prepend">
           <img src="https://i.imgur.com/MzpM4gV.png">
         </div>
-        <input type="text" class="form-control" name="namaLengkap" th:value="*{namaLengkap}" placeholder="Nama Lengkap Kamu">
+        <input type="text" class="form-control input-group-sm" name="namaLengkap" th:value="*{namaLengkap}" placeholder="Nama Lengkap Kamu">
       </div>
     </div>
     <div class="col">
@@ -85,6 +140,11 @@
   </div>
   <br>
   <button type="submit" class="btn btn-danger btn-lg">Pesan Sekarang</button>
-</form>
+</form>-->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -43,12 +43,12 @@ public class TiketController {
     
     @GetMapping(value = "/main-event/order")
     private String order(Model model){
-        TiketModel tiket = new TiketModel();
-        model.addAttribute("tiket", tiket);
+        TiketModel newTicket = new TiketModel();
+        model.addAttribute("ticket", newTicket);
         return "main-event_order";
     }
     
-    @PostMapping(value="/main-event/pay")
+    @PostMapping(value="/main-event/order")
     public String addTiket(@ModelAttribute TiketModel tiket, Model model){
         boolean flag = true;
         while(flag){
