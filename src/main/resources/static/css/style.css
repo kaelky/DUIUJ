@@ -86,10 +86,6 @@ margin: 0;
 	text-align: center;
 }
 
-input{
-	border-radius: 0px;	
-	width: 100%;
-}
 
 .col{
 	padding-left: 5rem;
@@ -100,6 +96,7 @@ input{
 	border-width: 2px;
 	border-style: solid;
 	border-color: #ba0731;
+	margin-bottom: 0.5rem;
 }
 
 
@@ -111,10 +108,7 @@ img{
 
 .input-group-prepend{
 	background-color: #ba0731;
-}
-
-.row{
-	margin-bottom: 0.5rem;
+	padding-right: 0.2rem;
 }
 
 .btn{
@@ -146,4 +140,27 @@ img{
 
 .perhatian{
 	font-weight: bold;
+}
+
+.input-group .form-control {
+  border: none;
+}
+
+/**
+#checkStatus .form-control{
+	border-color: #ba0731;
+	border-width: 2px;
+}**/
+
+.col-lg-6{
+	padding-top: 1.2rem;
+	padding-bottom: 1.2rem;
+}
+
+.col-lg-6 .btn{
+	color: #ff80cf;
+	background-color: white;
+	border-style: solid;
+	border-color: white;
+	border-width: 4px;
 }
