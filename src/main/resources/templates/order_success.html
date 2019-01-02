@@ -14,10 +14,10 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="jumbotron">
-                <p>DUIUJ 15</p>
-                <h1 class="display-4">Main Event</h1>
-                <p class="desc">Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
+            <div class="jumbotron" style="background-color: #FBFEF9";>
+                <p class="text-dark">DUIUJ 15</p>
+                <h1 class="display-4 text-dark">Main Event</h1>
+                <p class="desc text-dark">Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
                     Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.</p>
             </div>
         </div>
@@ -27,7 +27,7 @@
         <div class="row">
             <div class="title-head-pay">
                 <h3>Tiket Main Event berhasil dipesan!</h3>
-                <h4 th:text="'Kode tiketmu adalah: '+${tiket.kodeTiket}">Kode Tiket</h4>
+                <h4 th:text="'Kode tiketmu adalah: '+${ticket.kodeTiket}">Kode Tiket</h4>
                 <p>Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
                     Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.
                     Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
@@ -43,7 +43,7 @@
                 <br>
                 <p>Contact Person: Andi(08000000000)</p>
             </div>
-            <button type="submit" class="btn btn-danger btn-fin">Selesai Memesan</button>
+            <button type="submit" class="btn btn-danger btn-fin" th:href="@{/}">Selesai Memesan</button>
         </div>
     </div>
 

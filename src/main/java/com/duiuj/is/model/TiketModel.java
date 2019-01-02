@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Table(name = "tiket")
 public class TiketModel implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
     @NotNull
@@ -31,11 +31,6 @@ public class TiketModel implements Serializable {
     @Size(max = 8)
     @Column(name = "kode_tiket", nullable = false)
     private String kodeTiket;
-
-    @NotNull
-    @Size(max = 8)
-    @Column(name = "password_tiket", nullable = false)
-    private String passwordTiket;
 
     @NotNull
     @Size(max = 255)
@@ -92,14 +87,6 @@ public class TiketModel implements Serializable {
 
     public void setKodeTiket(String kodeTiket) {
         this.kodeTiket = kodeTiket;
-    }
-
-    public String getPasswordTiket() {
-        return passwordTiket;
-    }
-
-    public void setPasswordTiket(String passwordTiket) {
-        this.passwordTiket = passwordTiket;
     }
 
     public String getPilihanJurusan1() {

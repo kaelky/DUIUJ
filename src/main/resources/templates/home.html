@@ -14,63 +14,81 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="jumbotron">
-                <p>Selamat datang di website</p>
-                <h1 class="display-4">DUIUJ 15</h1>
-                <p class="desc">Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
+            <div class="jumbotron" style="background-color: #FBFEF9;">
+                <p class="text-dark">Selamat datang di website</p>
+                <h1 class="display-4 text-dark">DUIUJ 15</h1>
+                <p class="desc text-dark">Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
                     Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.</p>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-lg-6 text-center" style="background-color: lightpink">
-                <h3>Main Event</h3>
-                <br/>
-                <br/>
-                <div class="row">
-                    <div class="col-lg-3"></div>
-                    <div class="col-lg-6">
-                        <p>Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
-                            Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.</p>
+            <div class="col-lg-6 text-center">
+                <div class="card-box">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>Main Event</h2>
+                            <br/>
+                            <br/>
+                            <div class="row">
+                                <div class="col-lg-2">
+
+                                </div>
+                                <div class="col-lg-8">
+                                    <p>Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
+                                        Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.</p>
+                                </div>
+                                <div class="col-lg-2">
+
+                                </div>
+                            </div>
+                            <br/>
+                            <br/>
+                            <div class="row">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-6">
+                                    <div class="card-link"><a th:href="@{/main-event}" class="c-link btn btn-primary">Pesan Tiket Main Event</a></div>
+                                </div>
+                                <div class="col-lg-3"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-3"></div>
-                </div>
-                <br/>
-                <br/>
-                <div class="row">
-                    <div class="col-lg-3"></div>
-                    <div class="col-lg-6">
-                        <a class="btn btn-light" th:href="@{/main-event}">Pesan Tiket Main Event</a>
-                    </div>
-                    <div class="col-lg-3"></div>
                 </div>
             </div>
-            <div class="col-lg-6 text-center" style="background-color: lightgray">
-                <h3>Kompetisi</h3>
-                <br/>
-                <br/>
-                <div class="row">
-                    <div class="col-lg-3"></div>
-                    <div class="col-lg-6">
-                        <p>Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
-                            Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.</p>
-                    </div>
-                    <div class="col-lg-3"></div>
-                </div>
-                <br/>
-                <br/>
-                <div class="row">
-                    <div class="col-lg-3"></div>
-                    <div class="col-lg-6"><a class="btn btn-secondary" th:href="@{/competition}">Pelajari Lebih Lanjut</a></div>
-                    <div class="col-lg-3"></div>
-                </div>
 
+            <div class="col-lg-6 text-center">
+                <div class="card-box">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h2>Kompetisi</h2>
+                            <br/>
+                            <br/>
+                            <div class="row">
+                                <div class="col-lg-2"></div>
+                                <div class="col-lg-8">
+                                    <p>Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
+                                        Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.</p>
+                                </div>
+                                <div class="col-lg-2"></div>
+                            </div>
+                            <br/>
+                            <br/>
+                            <div class="row">
+                                <div class="col-lg-3"></div>
+                                <div class="col-lg-6">
+                                    <div class="card-link">
+                                        <a class="c-link btn btn-primary" th:href="@{/competition}">Pelajari Lebih Lanjut</a>
+                                    </div>
+                                <div class="col-lg-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

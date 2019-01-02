@@ -45,19 +45,19 @@ public class TiketController {
     public String addTiket(@ModelAttribute TiketModel ticket, Model model){
         boolean flag = true;
         while(flag){
-            String uuid = UUID.randomUUID().toString().substring(0,8).toUpperCase();
+            String uuid = UUID.randomUUID().toString().substring(0,6).toUpperCase();
             for(TiketModel oldTiket: tiketService.getAll()){
                 if(uuid.equals(oldTiket.getKodeTiket())){
                     flag = true;
-                }else{
+                }
+                else{
                     flag = false;
                     ticket.setKodeTiket(uuid);
                 }
             }
         }
-        ticket.setPasswordTiket(ticket.getKodeTiket());
         tiketService.add(ticket);
-        model.addAttribute("tiket", ticket);
+        model.addAttribute("ticket", ticket);
         return "order_success";
     }
 

@@ -17,6 +17,21 @@
 
     <body>
 
+        <!--<nav th:fragment="navbar-admin" class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand">
+                <img class="d-inline-block align-top"
+                     th:src="@{/img/Logo DUIUJ XV.png}"
+                     style="width: 30px ; height: 30px ;" alt="">
+                DUIUJ
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarAdmin">
+                <ul class="nav nav-pills ml-auto">
+                    <a class="nav-link disabled" th:text="'Total Pembeli : ' + ${totalTicket}"></a>
+                </ul>
+            </div>
+        </nav>-->
+
         <!-- Navbar - Home (Active) -->
         <nav th:fragment="navbar-home" class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" th:href="@{/}">
@@ -31,7 +46,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbar1">
-                <ul class="navbar-nav ml-auto">
+                <ul class="nav nav-pills ml-auto">
                     <li class="nav-item text-center px-4">
                         <a class="nav-link active" th:href="@{/}">Home <span class="sr-only">(current)</span> </a>
                     </li>
@@ -59,7 +74,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbar2">
-                <ul class="navbar-nav ml-auto">
+                <ul class="nav nav-pills ml-auto">
                     <li class="nav-item text-center px-4">
                         <a class="nav-link" th:href="@{/}">Home <span class="sr-only">(current)</span> </a>
                     </li>
@@ -88,7 +103,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbar3">
-                <ul class="navbar-nav ml-auto">
+                <ul class="nav nav-pills ml-auto">
                     <li class="nav-item text-center px-4">
                         <a class="nav-link" th:href="@{/}">Home <span class="sr-only">(current)</span> </a>
                     </li>

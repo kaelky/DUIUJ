@@ -14,10 +14,10 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="jumbotron">
-                <p>DUIUJ 15</p>
-                <h1 class="display-4">Main Event</h1>
-                <p class="desc">Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
+            <div class="jumbotron" style="background-color: #FBFEF9";>
+                <p class="text-dark">DUIUJ 15</p>
+                <h1 class="display-4 text-dark">Main Event</h1>
+                <p class="desc text-dark">Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
                     Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.</p>
             </div>
         </div>
@@ -32,7 +32,7 @@
                 <br/>
                 <div class="card">
                     <div class="card-header">
-                        <ul class="nav nav-tabs" id="helpDeskTab" role="tablist">
+                        <ul class="nav nav-pills card-header-pills" id="helpDeskTab" role="tablist">
                             <li class="nav-item">
                                 <a href="#order" class="nav-link active" role="tab" data-toggle="tab">Beli Tiket</a>
                             </li>
@@ -49,40 +49,40 @@
                                 <br/>
                                 <form th:action="@{/main-event/ticket/order}" th:object="${ticket}" method="POST">
       								<div class="input-group">
-      								<div class="input-group-prepend">
-      								<label> <img alt="Social 1" src="https://i.imgur.com/Hnr7rWe.png" /> </label>
-      								</div>
-                                    <input required type="text" class="form-control input-group-sm" name="namaLengkap" th:value="*{namaLengkap}" placeholder="Nama Lengkap">
+      								    <div class="input-group-prepend">
+      								        <label> <img alt="Social 1" src="https://i.imgur.com/Hnr7rWe.png" /> </label>
+      								    </div>
+                                        <input required type="text" class="form-control input-group-sm" name="namaLengkap" th:value="*{namaLengkap}" placeholder="Nama Lengkap">
                                     </div>
                                     <div class="input-group">
-      								<div class="input-group-prepend">
-      								<label> <img alt="Social 1" src="https://i.imgur.com/2fyHJfJ.png" /> </label>
-      								</div>
-                                    <input required type="text" class="form-control input-group-sm" name="asalSekolah" th:value="*{asalSekolah}" placeholder="Asal Sekolah">
+      								    <div class="input-group-prepend">
+      								        <label> <img alt="Social 1" src="https://i.imgur.com/2fyHJfJ.png" /> </label>
+      								    </div>
+                                        <input required type="text" class="form-control input-group-sm" name="asalSekolah" th:value="*{asalSekolah}" placeholder="Asal Sekolah">
+                                    </div>
+                                        <div class="input-group">
+      								        <div class="input-group-prepend">
+      								        <label> <img alt="Social 1" src="https://i.imgur.com/DxUvnsW.png" /> </label>
+                                        </div>
+                                        <input required type="text" class="form-control input-group-sm" name="nomorHandphone" th:value="*{nomorHandphone}" placeholder="Nomor Handphone">
                                     </div>
                                     <div class="input-group">
-      								<div class="input-group-prepend">
-      								<label> <img alt="Social 1" src="https://i.imgur.com/DxUvnsW.png" /> </label>
-      								</div>
-                                    <input required type="text" class="form-control input-group-sm" name="nomorHandphone" th:value="*{nomorHandphone}" placeholder="Nomor Handphone">
+      								    <div class="input-group-prepend">
+      								        <label> <img alt="Social 1" src="https://i.imgur.com/yV0AIbP.png" /> </label>
+      								    </div>
+                                        <input required type="text" class="form-control" name="pilihanJurusan1" th:value="*{pilihanJurusan1}" placeholder="Pilihan 1* (wajib diisi)">
                                     </div>
                                     <div class="input-group">
-      								<div class="input-group-prepend">
-      								<label> <img alt="Social 1" src="https://i.imgur.com/yV0AIbP.png" /> </label>
-      								</div>
-                                    <input required type="text" class="form-control" name="pilihanJurusan1" th:value="*{pilihanJurusan1}" placeholder="Pilihan 1* (wajib diisi)">
+      								    <div class="input-group-prepend">
+      								        <label> <img alt="Social 1" src="https://i.imgur.com/yV0AIbP.png" /> </label>
+      								    </div>
+                                        <input type="text" class="form-control" name="pilihanJurusan2" th:value="*{pilihanJurusan2}" placeholder="Pilihan 2">
                                     </div>
                                     <div class="input-group">
-      								<div class="input-group-prepend">
-      								<label> <img alt="Social 1" src="https://i.imgur.com/yV0AIbP.png" /> </label>
-      								</div>
-                                    <input type="text" class="form-control" name="pilihanJurusan2" th:value="*{pilihanJurusan2}" placeholder="Pilihan 2">
-                                    </div>
-                                    <div class="input-group">
-      								<div class="input-group-prepend">
-      								<label> <img alt="Social 1" src="https://i.imgur.com/yV0AIbP.png" /> </label>
-      								</div>
-                                    <input type="text" class="form-control" name="pilihanJurusan3" th:value="*{pilihanJurusan3}" placeholder="Pilihan 3">
+      								    <div class="input-group-prepend">
+      								        <label> <img alt="Social 1" src="https://i.imgur.com/yV0AIbP.png" /> </label>
+      								    </div>
+                                        <input type="text" class="form-control" name="pilihanJurusan3" th:value="*{pilihanJurusan3}" placeholder="Pilihan 3">
                                     </div>
                                     <br/>
                                     <button type="submit" class="btn btn-danger btn-lg">Pesan Sekarang</button>
@@ -93,7 +93,12 @@
                                 <p class="card-text">Kamu ragu bahwa tiketmu sudah <i>valid</i>? Langsung saja cek status tiketmu! Masukkan kode tiket yang sudah diberikan saat kamu memesan tiket.</p>
                                 <br/>
                                 <form th:action = "@{/ticket/check/kode}" method="get">
-                                    <input required class="form-control input-group-sm" placeholder="Kode Tiket" th:name="kodeTiket"/>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <label> <img alt="Social 1" src="https://i.imgur.com/ktGuFRV.png"/> </label>
+                                        </div>
+                                        <input required class="form-control" placeholder="Kode Tiket" th:name="kodeTiket"/>
+                                    </div>
                                     <br/>
                                     <button type="submit" class="btn btn-danger">Cek Sekarang</button>
                                 </form>

@@ -146,6 +146,55 @@ img{
   border: none;
 }
 
+.card-box {
+	background: #FBFEF9;
+	min-height: 300px;
+	position: relative;
+	padding: 30px 30px 20px;
+	margin-bottom: 20px;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	position: relative;
+	cursor: pointer;
+}
+
+.card-box:hover {
+	background: linear-gradient(to right, #e1e4e0 0%, #fdfefc 51%, #ffffff 100%);
+}
+
+.card-box:after {
+	display: block;
+	background: #ba0731;
+	border-top: 2px solid #ba0731;
+	content: '';
+	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+
+.card-title h2 {
+	margin: 0;
+	padding-top: 5%;
+	color: #ba0731;
+	font-family: 'Quicksand', sans-serif;
+	text-transform: uppercase;
+	font-size: 24px;
+	line-height: 1;
+	margin-bottom: 15px;
+}
+
+.card-title p {
+	margin: 0;
+	margin-bottom: 10px;
+}
+
 /**
 #checkStatus .form-control{
 	border-color: #ba0731;
@@ -157,10 +206,15 @@ img{
 	padding-bottom: 1.2rem;
 }
 
-.col-lg-6 .btn{
+li .active{
+	background-color: #ba0731 !important;
+	color: white;
+}
+
+/*.col-lg-6 .btn{
 	color: #ff80cf;
 	background-color: white;
 	border-style: solid;
 	border-color: white;
 	border-width: 4px;
-}
+}*/

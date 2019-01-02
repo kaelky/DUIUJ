@@ -16,8 +16,8 @@
 
     </head>
     <body>
-        <!-- Navbar -->
-        <nav th:replace="fragments/fragment :: navbar"></nav>
+         <!--Navbar-->
+        <!--<nav th:replace="fragments/fragment :: navbar-admin"></nav>-->
 
         <table class="table table-active table-bordered">
             <thead class="thead-dark">
@@ -46,19 +46,21 @@
                     <td th:text="${ticket.pilihanJurusan3}"></td>
                     <td th:if="${ticket.statusPembayaran == 0}">
                         <form th:action="@{|/admin/ticket/changeStatus/${ticket.id}|}" method="post">
-                            <button type="submit" class="btn-light">
+                            <button type="submit" class="btn btn-light">
                                 <span style="font-size: 1em;"><i class="fa fa-times"></i> </span>
                             </button>
                         </form>
                     </td>
                     <td th:if="${ticket.statusPembayaran == 1}">
                         <form th:action="@{|/admin/ticket/changeStatus/${ticket.id}|}" method="post">
-                            <button type="submit" class="btn-light">
+                            <button type="submit" class="btn btn-light">
                                 <span style="font-size: 1em;"><i class="fa fa-check"></i></span>
                             </button>
                         </form>
                     <td>
-                    <button type="button" class="btn-danger" data-toggle="modal" data-target="#modal-confirmation" th:attr="data-target='#modal-confirmation'+${ticket.id}">Delete</button>
+                        <form th:action="@{|/admin/ticket/delete/${ticket.id}|}" method="post">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
                     </td>
                 </tr>
             </tbody>

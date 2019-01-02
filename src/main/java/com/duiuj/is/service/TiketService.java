@@ -16,5 +16,5 @@ public interface TiketService {
     TiketModel getById(long id);
     TiketModel getByNamaLengkapAndNomorHandphone(String nama, String noHp);
     TiketModel getByKodeTiket(String kodeTiket);
-    TiketModel getByNomorHandphone(String nomorHandphone);
+    int countTicket();
 }

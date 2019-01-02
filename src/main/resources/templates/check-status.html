@@ -22,35 +22,41 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="card text-white bg-dark text-center">
-                        <div class="card-header">
-                            Cek Status Tiket
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Masukkan Kode Tiket</h5>
-                            <form th:action = "@{/ticket/check/kode}" method="get">
-                                <input required class="form-control input-group-sm" placeholder="Kode Tiket" th:name="kodeTiket"/>
-                                <button type="submit" class="btn btn-primary">Cek Sekarang</button>
-                            </form>
-                        </div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8 card text-center" style="margin-top: 20px; margin-bottom: 20px;">
+                    <div class="card-header">
+                        <h3>Cek Status Tiketmu</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Kamu ragu bahwa tiketmu sudah <i>valid</i>? Langsung saja cek status tiketmu! Masukkan kode tiket yang sudah diberikan saat kamu memesan tiket.</p>
+                        <form th:action = "@{/ticket/check/kode}" method="get">
+                            <input required class="form-control input-group-sm" placeholder="Kode Tiket" th:name="kodeTiket"/>
+                            <br/>
+                            <button type="submit" class="btn btn-danger">Cek Sekarang</button>
+                        </form>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="card text-white bg-dark text-center">
-                        <div class="card-header">
-                            Lupa Kode Tiket
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Pulihkan Kode Tiket</h5>
-                            <form th:action="@{/ticket/check/pulih}" method="get">
+                <div class="col-lg-2"></div>
+               <!-- <div class="col-lg-6 card text-center" style="margin-top: 20px; margin-bottom: 20px;">
+                    <div class="card-header">
+                        <h3>Lupa Kode Tiket</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Kamu lupa kode tiketmu? Jangan khawatir! Kami bisa bantu pulihkan kode tiketmu! Masukkan nama lengkap dan nomor handphone yang sudah kamu daftarkan sebelumnya</p>
+                        <form th:action="@{/ticket/check/pulih}" method="get">
+                        <div class="row">
+                            <div class="col-md-6">
                                 <input required class="form-control input-group-sm" placeholder="Nama Lengkap" th:name="namaLengkap"/>
+                            </div>
+                            <div class="col-md-6">
                                 <input required class="form-control input-group-sm" placeholder="Nomor Handphone" th:name="nomorHandphone"/>
-                                <button type="submit" class="btn btn-primary">Pulihkan Kode Tiket</button>
-                            </form>
+                            </div>
                         </div>
+                            <br/>
+                            <button type="submit" class="btn btn-danger">Pulihkan Kode Tiket</button>
+                        </form>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </body>

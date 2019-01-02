@@ -27,7 +27,6 @@ public class TiketServiceImpl implements TiketService {
         oldTiket.setNomorHandphone(tiket.getNomorHandphone());
         oldTiket.setAsalSekolah(tiket.getAsalSekolah());
         oldTiket.setKodeTiket(tiket.getKodeTiket());
-        oldTiket.setPasswordTiket(tiket.getPasswordTiket());
         oldTiket.setPilihanJurusan1(tiket.getPilihanJurusan1());
         oldTiket.setPilihanJurusan2(tiket.getPilihanJurusan2());
         oldTiket.setPilihanJurusan3(tiket.getPilihanJurusan3());
@@ -73,7 +72,12 @@ public class TiketServiceImpl implements TiketService {
     }
 
     @Override
-    public TiketModel getByNomorHandphone(String nomorHandphone) {
-        return tiketDb.findByNomorHandphone(nomorHandphone);
+    public int countTicket(){
+        List<TiketModel> tickets = tiketDb.findAll();
+        int result = 0;
+        for (int i = 0 ; i < tickets.size() ; i++){
+            result += 1;
+        }
+        return result;
     }
 }
