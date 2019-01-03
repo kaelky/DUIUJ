@@ -19,6 +19,15 @@
     margin-bottom: 10rem;
 }
 
+a.nav-link {
+    color: #ba0731;
+}
+
+a.nav-link:hover{
+    background-color: #ba0731;
+    color: #FBFEF9;
+}
+
 input.placeholder {
     text-align: center;
 }
@@ -27,6 +36,8 @@ html {
     position: relative;
     min-height: 100%;
 }
+
+
 
 body {
     /* Margin bottom by footer height */
@@ -161,6 +172,7 @@ img{
 	justify-content: space-between;
 	position: relative;
 	cursor: pointer;
+    transition: 0.3s;
 }
 
 .card-box:hover {
@@ -211,10 +223,23 @@ li .active{
 	color: white;
 }
 
-/*.col-lg-6 .btn{
-	color: #ff80cf;
-	background-color: white;
-	border-style: solid;
-	border-color: white;
-	border-width: 4px;
-}*/
+section {
+    min-height: calc(100vh - 100px);
+}
+footer{
+    height: 100px;
+    color: #ba0731;
+    padding-top: 10px;
+}
+
+.socmed-link{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #ba0731;
+    transition: 0.3s;
+}
+
+.socmed-link:hover{
+    color: #000004;
+}
+
