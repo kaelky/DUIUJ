@@ -21,6 +21,7 @@
 
 a.nav-link {
     color: #ba0731;
+    transition: 0.3s;
 }
 
 a.nav-link:hover{
@@ -36,8 +37,6 @@ html {
     position: relative;
     min-height: 100%;
 }
-
-
 
 body {
     /* Margin bottom by footer height */
@@ -97,17 +96,15 @@ margin: 0;
 	text-align: center;
 }
 
-
 .col{
 	padding-left: 5rem;
 	padding-right: 5rem;
 }
 
 .input-group{
-	border-width: 2px;
-	border-style: solid;
-	border-color: #ba0731;
-	margin-bottom: 0.5rem;
+    border: 2px solid #ba0731;
+    border-radius: 7px;
+    margin-bottom: 0.5rem;
 }
 
 
@@ -120,6 +117,7 @@ img{
 .input-group-prepend{
 	background-color: #ba0731;
 	padding-right: 0.2rem;
+    margin-right: 0;
 }
 
 .btn{
@@ -128,15 +126,19 @@ img{
 	border-style: none;
 	margin:auto;
   	display:block;
+    transition: 0.3s;
 }
+
+.btn:hover{
+    background-color: #de3c4b;
+}
+
 
 .btn-fin{
 	background-color: #ffffff;
-	border-color: #ba0731;
-	border-radius: 50px;
-	border-style: solid;
-	border-width: 2px;
-	margin:auto;
+    border-radius: 50px;
+    border: 2px solid #ba0731;
+    margin:auto;
   	display:block;
   	color: #000000;
 }
@@ -192,19 +194,17 @@ img{
 }
 
 .card-title h2 {
-	margin: 0;
-	padding-top: 5%;
+    padding-top: 5%;
 	color: #ba0731;
 	font-family: 'Quicksand', sans-serif;
 	text-transform: uppercase;
 	font-size: 24px;
 	line-height: 1;
-	margin-bottom: 15px;
+    margin: 0 0 15px;
 }
 
 .card-title p {
-	margin: 0;
-	margin-bottom: 10px;
+    margin: 0 0 10px;
 }
 
 /**
