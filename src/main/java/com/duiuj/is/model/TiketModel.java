@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Table(name = "tiket")
 public class TiketModel implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
     @NotNull
