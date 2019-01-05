@@ -22,7 +22,7 @@ public class AdminController {
 
     private RedirectView redirectView = new RedirectView();
 
-    @GetMapping(value = "/admin/tickets")
+    @GetMapping(value = "/admin/tickets/DUIUJ15SEMANGATYAKABCDEF123")
     private String admin(Model model){
 
         List<TiketModel> tickets = tiketService.getAll();
@@ -47,7 +47,7 @@ public class AdminController {
     private RedirectView changeStatusTiket(@PathVariable(value = "IDTiket") long idTicket) throws IOException {
         TiketModel ticket = tiketService.getById(idTicket);
         tiketService.changeStatus(ticket);
-        redirectView.setUrl("/admin/tickets");
+        redirectView.setUrl("/admin/tickets/DUIUJ15SEMANGATYAKABCDEF123");
         return redirectView;
     }
 
@@ -55,7 +55,7 @@ public class AdminController {
     private RedirectView deleteTiket(@PathVariable (value = "IDTiket") long idTicket) throws IOException {
         TiketModel ticket = tiketService.getById(idTicket);
         tiketService.delete(ticket);
-        redirectView.setUrl("/admin/tickets");
+        redirectView.setUrl("/admin/tickets/DUIUJ15SEMANGATYAKABCDEF123");
         return redirectView;
     }
 }
