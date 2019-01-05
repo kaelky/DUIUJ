@@ -26,7 +26,6 @@ public class TiketServiceImpl implements TiketService {
         oldTiket.setNamaLengkap(tiket.getNamaLengkap());
         oldTiket.setNomorHandphone(tiket.getNomorHandphone());
         oldTiket.setAsalSekolah(tiket.getAsalSekolah());
-        oldTiket.setKodeTiket(tiket.getKodeTiket());
         oldTiket.setPilihanJurusan1(tiket.getPilihanJurusan1());
         oldTiket.setPilihanJurusan2(tiket.getPilihanJurusan2());
         oldTiket.setPilihanJurusan3(tiket.getPilihanJurusan3());

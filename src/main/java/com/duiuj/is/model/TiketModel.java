@@ -49,6 +49,10 @@ public class TiketModel implements Serializable {
     @Column(name = "status_pembayaran", nullable = false)
     private int statusPembayaran;
 
+    @NotNull
+    @Column(name = "waktu_registrasi", nullable = false)
+    private String date;
+
     public long getId() {
         return id;
     }
@@ -119,5 +123,13 @@ public class TiketModel implements Serializable {
 
     public void setStatusPembayaran(int statusPembayaran) {
         this.statusPembayaran = statusPembayaran;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

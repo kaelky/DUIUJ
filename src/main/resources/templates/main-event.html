@@ -70,21 +70,23 @@
       								    <div class="input-group-prepend">
       								        <label> <img alt="Social 1" src="https://i.imgur.com/yV0AIbP.png" /> </label>
       								    </div>
-                                        <input required type="text" class="form-control" name="pilihanJurusan1" th:value="*{pilihanJurusan1}" placeholder="Pilihan 1* (wajib diisi)">
+                                        <input required type="text" class="form-control" name="pilihanJurusan1" th:value="*{pilihanJurusan1}" placeholder="Pilihan Program Studi 1">
                                     </div>
                                     <div class="input-group">
       								    <div class="input-group-prepend">
       								        <label> <img alt="Social 1" src="https://i.imgur.com/yV0AIbP.png" /> </label>
       								    </div>
-                                        <input type="text" class="form-control" name="pilihanJurusan2" th:value="*{pilihanJurusan2}" placeholder="Pilihan 2">
+                                        <input type="text" class="form-control" name="pilihanJurusan2" th:value="*{pilihanJurusan2}" placeholder="Pilihan Program Studi 2">
                                     </div>
                                     <div class="input-group">
       								    <div class="input-group-prepend">
       								        <label> <img alt="Social 1" src="https://i.imgur.com/yV0AIbP.png" /> </label>
       								    </div>
-                                        <input type="text" class="form-control" name="pilihanJurusan3" th:value="*{pilihanJurusan3}" placeholder="Pilihan 3">
+                                        <input type="text" class="form-control" name="pilihanJurusan3" th:value="*{pilihanJurusan3}" placeholder="Pilihan Program Studi 3">
                                     </div>
+                                    <a href="https://simak.ui.ac.id/reguler.html">Lihat Daftar Pilihan Program Studi</a>
                                     <br/>
+                                    <br>
                                     <button type="submit" class="btn btn-danger btn-lg">Pesan Sekarang</button>
                                 </form>
                             </div>
@@ -112,68 +114,6 @@
         </div>
     </div>
 
-<!--</div>-->
-<!--<br>-->
-<!--<form th:action="@{/main-event/order}" th:object="${ticket}" method ="POST">
-  <div class="row top">
-    <div class="col">
-    <h4> Data Diri </h4>
-    	<div class="input-group">
-        <div class="input-group-prepend">
-          <img src="https://i.imgur.com/MzpM4gV.png">
-        </div>
-        <input type="text" class="form-control input-group-sm" name="namaLengkap" th:value="*{namaLengkap}" placeholder="Nama Lengkap Kamu">
-      </div>
-    </div>
-    <div class="col">
-    <h4> Pilihan Program Studi </h4>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <img src="https://i.imgur.com/YbhrOSR.png">
-        </div>
-        <input type="text" class="form-control" name="pilihanJurusan1" th:value="*{pilihanJurusan1}" placeholder="Pilihan 1* (wajib diisi)">
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-    	<div class="input-group">
-        <div class="input-group-prepend">
-          <img src="https://i.imgur.com/81GXyyq.png">
-        </div>
-        <input type="text" class="form-control" name="asalSekolah" th:value="*{asalSekolah}" placeholder="Asal Sekolah">
-      </div>
-    </div>
-    <div class="col">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <img src="https://i.imgur.com/YbhrOSR.png">
-        </div>
-        <input type="text" class="form-control" name="pilihanJurusan2" th:value="*{pilihanJurusan2}" placeholder="Pilihan 2">
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-    	<div class="input-group">
-        <div class="input-group-prepend">
-          <img src="https://i.imgur.com/UFQ1lbL.png">
-        </div>
-        <input type="text" class="form-control" name="nomorHandphone" th:value="*{nomorHandphone}" placeholder="Nomor Handphone">
-      </div>
-    </div>
-    <div class="col">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <img src="https://i.imgur.com/YbhrOSR.png">
-        </div>
-        <input type="text" class="form-control" name="pilihanJurusan3" th:value="*{pilihanJurusan3}" placeholder="Pilihan 3">
-      </div>
-    </div>
-  </div>
-  <br>
-  <button type="submit" class="btn btn-danger btn-lg">Pesan Sekarang</button>
-</form>-->
 <footer th:replace="fragments/fragment :: footer"></footer>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

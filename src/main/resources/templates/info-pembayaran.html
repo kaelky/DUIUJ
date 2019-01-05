@@ -26,15 +26,9 @@
     <div class="container">
         <div class="row">
             <div class="title-head-pay">
-                <h3 th:text="'Selamat, ' + ${ticket.namaLengkap} + '! Tiket Main Event berhasil dipesan!'"></h3>
-                <h4 th:text="'Kode tiketmu adalah: '+${ticket.kodeTiket}">Kode Tiket</h4>
-                <p>Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
-                    Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.
-                    Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
-                    Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex</p>
                 <div class="perhatian">
                     <br>
-                    <h4>Perhatian</h4>
+                    <h4>Info Pembayaran</h4>
                     <p>Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
                         Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.
                         Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
@@ -42,8 +36,9 @@
                 </div>
                 <br>
                 <p>Contact Person: Andi(08000000000)</p>
+                <br>
             </div>
-            <a class="btn btn-danger btn-fin" th:href="@{/main-event}">Selesai Memesan</a>
+            <a class="btn btn-danger btn-fin" th:href="@{/}">Kembali ke Beranda</a>
         </div>
     </div>
 <footer th:replace="fragments/fragment :: footer"></footer>

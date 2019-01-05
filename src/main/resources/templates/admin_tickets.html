@@ -37,7 +37,7 @@
             <tbody>
                 <tr th:each="ticket, iterationStatus : ${tickets}">
                     <td th:text="${iterationStatus.count}"></td>
-                    <td> <a th:href="@{|/cek-status-tiket/${ticket.id}|}" th:text="${ticket.namaLengkap}"/></td>
+                    <td> <a th:href="@{'/ticket/check/kode?kodeTiket=' + ${ticket.kodeTiket}}" th:text="${ticket.namaLengkap}"/></td>
                     <td th:text="${ticket.asalSekolah}"></td>
                     <td th:text="${ticket.nomorHandphone}"></td>
                     <td th:text="${ticket.kodeTiket}"></td>

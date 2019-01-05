@@ -8,8 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.view.RedirectView;
 
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
 @Controller
@@ -17,26 +19,9 @@ public class TiketController {
     @Autowired
     private TiketService tiketService;
 
-    private RedirectView redirectView;
-
-  /*  @PostMapping (value = "/ticket/check")
-    private RedirectView checkTicketStatus(@ModelAttribute TicketWithID objekPengecekan) {
-        redirectView.setUrl("/ticket/check" + objekPengecekan.getKodeTiket());
-        return redirectView;
-    }*/
-
     @GetMapping (value = "/ticket/check/kode")
     private String checkTicketStatusWithTicket(@RequestParam("kodeTiket") String kodeTiket, Model model) {
         TiketModel ticket = tiketService.getByKodeTiket(kodeTiket);
-        model.addAttribute("ticket", ticket);
-        return "tiket-detail";
-    }
-
-    @GetMapping (value = "/ticket/check/pulih")
-    private String checkTicketStatusWithNamaLengkapAndNomorHandphone(@RequestParam("namaLengkap") String namaLengkap,
-                                                                     @RequestParam("nomorHandphone") String nomorHandphone,
-                                                                     Model model) {
-        TiketModel ticket = tiketService.getByNamaLengkapAndNomorHandphone(namaLengkap, nomorHandphone);
         model.addAttribute("ticket", ticket);
         return "tiket-detail";
     }
@@ -56,22 +41,15 @@ public class TiketController {
                 }
             }
         }
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        ticket.setDate(dtf.format(now));
+
         tiketService.add(ticket);
         model.addAttribute("ticket", ticket);
         return "order_success";
     }
-
-    
-    /*@DeleteMapping(value="/admin/tickets/delete/{ticket-id}")
-    public void deleteTiket(@PathVariable("ticket-id") long id){
-        TiketModel tiket = tiketService.getById(id);
-        tiketService.delete(tiket);
-    }*/
-
-    /*@GetMapping(value="/admin/tickets/get-all")
-    public List<TiketModel> viewAllTickets(){
-        return tiketService.getAll();
-    }*/
     
     @PutMapping(value = "/main-event/pay")
     public TiketModel updateTiketSubmit(@RequestParam(value = "ticket-id") long id,
@@ -94,5 +72,24 @@ public class TiketController {
                                       @RequestParam(value = "nomor-hp") String noHp){
         TiketModel tiket = tiketService.getByNamaLengkapAndNomorHandphone(nama, noHp);
         return tiket;
+    }
+
+    @GetMapping(value = "/main-event/ticket/ubah/{IDTicket}")
+    public String updateTicketData(@PathVariable (value = "IDTicket") long idTicket, Model model) throws IOException {
+        TiketModel ticket = tiketService.getById(idTicket);
+        model.addAttribute("ticket", ticket);
+        return "update-ticket";
+    }
+
+    @PostMapping(value = "/main-event/ticket/ubah")
+    public String updateTicketData(@ModelAttribute TiketModel ticket, Model model){
+        tiketService.update(ticket);
+        model.addAttribute("ticket", ticket);
+        return "tiket-detail";
+    }
+
+    @GetMapping(value = "/main-event/info-pembayaran")
+    public String infoPembayaran(){
+        return "info-pembayaran";
     }
 }
