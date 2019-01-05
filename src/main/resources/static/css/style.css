@@ -243,3 +243,8 @@ footer{
     color: #000004;
 }
 
+.center-pills {
+	display: flex;
+	justify-content: center;
+}
+
