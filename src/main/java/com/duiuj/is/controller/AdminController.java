@@ -30,9 +30,15 @@ public class AdminController {
         Collections.sort(tickets, new Comparator<TiketModel>() {
             @Override
             public int compare(TiketModel o1, TiketModel o2) {
-                return (o1.getDate()).compareTo(o2.getDate());
+                return (o1.getId()+"").compareTo(o2.getId()+"");
             }
         });
+
+        for (int i  = 0 ; i < tickets.size() ; i++){
+            if (tickets.get(i).getId() == 1){
+                tickets.remove(tickets.get(i));
+            }
+        }
 
         model.addAttribute("tickets", tickets);
 
