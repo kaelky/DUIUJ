@@ -17,8 +17,9 @@
             <div class="jumbotron" style="background-color: #FBFEF9";>
                 <p class="text-dark">DUIUJ 15</p>
                 <h1 class="display-4 text-dark">Main Event</h1>
-                <p class="desc text-dark">Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
-                    Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.</p>
+                <p class="desc text-dark">Rangkaian acara pada DUIUJ XV terdiri atas Goes To School, Try Out, dan Bedah Kampus yang akan mewadahi siswa - siswi SMA sederajat Provinsi Jambi dalam mendapatkan informasi mengenai Universitas Indonesia.
+                    Adapun <i>Main Event</i> mencakup kegiatan Try Out dan Bedah Kampus. Ayo segera daftarkan dirimu sebelum kehabisan tiket!
+                </p>
             </div>
         </div>
     </div>
@@ -28,20 +29,28 @@
             <div class="title-head-pay">
                 <h3 th:text="'Selamat, ' + ${ticket.namaLengkap} + '! Tiket Main Event berhasil dipesan!'"></h3>
                 <h4 th:text="'Kode tiketmu adalah: '+${ticket.kodeTiket}">Kode Tiket</h4>
-                <p>Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
-                    Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.
-                    Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
-                    Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex</p>
                 <div class="perhatian">
                     <br>
                     <h4>Perhatian</h4>
-                    <p>Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
-                        Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex meis suavitate, vero fabulas voluptatibus mei.
-                        Lorem ipsum dolor sit amet, pri phaedrum salutandi id. Vidisse expetendis adipiscing et per.
-                        Vis in quaestio pericula, quodsi habemus te duo. Ea his omnis velit. Duo ex</p>
+                    <p>Jangan pernah memberitahukan kode tiketmu kepada siapapun. Panitia tidak bertanggung jawab atas seluruh tindakan kriminal terhadap tiketmu. Kode tiket akan digunakan untuk registrasi ulang pada saat Main Event berlangsung.
+                        Silakan cek status tiketmu pada halaman <a th:href="@{/main-event}"><i >Main Event</i></a> dan lakukan pembayaran segera agar status tiketmu <i>valid.</i></p>
+                    <br>
+                    <p>Pembayaran dapat dilakukan melalui 3 cara, yaitu : <br>
+                        1. Transfer ke rekening BNI dengan No. Rekening 0536033356 atas nama Natasya Meidiana. <br>
+                        2. Pembayaran tunai kepada Panitia DUIUJ XIV di DomeSteak sesuai Office Hours (Senin s.d. Jumat - 14.00 WIB s.d. 17.00 WIB). <br>
+                        3. Pemesanan dan pembayaran melalui Bendahara kelas.
+                    </p>
+                    <br>
+                    <p>
+                        <b>Setelah melakukan pembayaran, Anda perlu melakukan konfirmasi pembayaran dengan cara - cara sebagai berikut.</b><br>
+                        1. Jika Anda membayar melalui rekening BNI, silakan melakukan konfirmasi pembayaran dengan mengirim email ke duiujxv@gmail.com dengan subjek "Konfirmasi | Nama Anda" dan isi berupa foto bukti pembayaran Anda.
+                        Contoh : Konfirmasi | Nissa Sabyan<br>
+                        2. Jika Anda melakukan pembayaran tunai kepada Panitia DUIUJ XIV, maka pastikan Anda menuliskan nama Anda dan alamat email pada kertas yang telah disediakan panitia.<br>
+                        3. Jika Anda melakukan pembayaran tunai melalui Bendahara kelas, maka pastikan Anda menuliskan nama Anda dan alamat email pada kertas yang telah dititipkan panitia melalui Bendahara kelas.<br>
+                    </p>
                 </div>
                 <br>
-                <p>Contact Person: Andi(08000000000)</p>
+                <p>Silakan menghubungi panitia untuk pertanyaan lebih lanjut.</p>
             </div>
             <a class="btn btn-danger btn-fin" th:href="@{/main-event}">Selesai Memesan</a>
         </div>

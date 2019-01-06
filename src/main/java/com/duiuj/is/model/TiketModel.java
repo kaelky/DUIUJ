@@ -13,7 +13,7 @@ public class TiketModel implements Serializable {
     private long id;
 
     @NotNull
-    @Size(max = 21)
+    @Size(max = 255)
     @Column(name = "nama_lengkap", nullable = false)
     private String namaLengkap;
 
