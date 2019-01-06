@@ -46,6 +46,10 @@ public class AdminController {
 
         model.addAttribute("totalTicket", totalTicket);
 
+        int totalTicketValid = tiketService.countTicketValid();
+
+        model.addAttribute("totalTicketValid", totalTicketValid);
+
         return "admin_tickets";
     }
 

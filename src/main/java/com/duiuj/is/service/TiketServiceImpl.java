@@ -77,6 +77,18 @@ public class TiketServiceImpl implements TiketService {
         for (int i = 0 ; i < tickets.size() ; i++){
             result += 1;
         }
+        return result - 1;
+    }
+
+    @Override
+    public int countTicketValid(){
+        List<TiketModel> tickets = tiketDb.findAll();
+        int result = 0;
+        for (int i = 0 ; i < tickets.size() ; i++){
+            if (tickets.get(i).getStatusPembayaran() == 1){
+                result += 1;
+            }
+        }
         return result;
     }
 }

@@ -17,4 +17,5 @@ public interface TiketService {
     TiketModel getByNamaLengkapAndNomorHandphone(String nama, String noHp);
     TiketModel getByKodeTiket(String kodeTiket);
     int countTicket();
+    int countTicketValid();
 }
